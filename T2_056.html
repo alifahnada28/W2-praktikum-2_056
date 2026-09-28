@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>T2_056</title>
+</head>
+<body>
+    <h2>Program Pencetak Angka dengan Aturan Khusus</h2>
+    <p id="hasil"></p>
+
+    <script>
+        let output = "";
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 15 === 0) {
+                output += "MI2A";
+            } else if (i % 3 === 0) {
+                output += "MI";
+            } else if (i % 5 === 0) {
+                output += "2A";
+            } else {
+                output += i;
+            }
+
+            if (i < 100) {
+                output += ", ";
+            }
+        }
+
+        document.getElementById("hasil").innerHTML = output;
+    </script>
+</body>
+</html>
